@@ -1,11 +1,11 @@
 'use strict';
 
-export default function(path, success, error){
+export default function toBase64(path, success, error) {
 	function resolveImgURI(fileUrl, callback) {
 		if (cordova.platformId.toLowerCase() === 'android') {
 			fileUrl = `file://${fileUrl}`;
 		}
-		window.resolveLocalFileSystemURL(fileUrl, function(fileEntry){
+		window.resolveLocalFileSystemURL(fileUrl, function(fileEntry) {
 			fileEntry.file(function(file){ readDataUrl(file, callback) }, fail);
 		}, fail);
 	};

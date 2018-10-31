@@ -1,4 +1,6 @@
 export default {
-  timeout: 5 * 1000,
+  timeout: -1,
   json: true,
+  mock: false,
+  mockData: {},
 }

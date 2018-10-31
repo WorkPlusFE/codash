@@ -1,6 +1,6 @@
 'use strict';
 
-import { each } from './utils';
+import { each } from '../utils';
 
 class Interceptor {
   constructor() {

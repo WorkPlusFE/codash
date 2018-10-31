@@ -4,6 +4,11 @@ const toString = val => Object.prototype.toString.call(val);
 const isArray = val => toString(val) === '[object Array]';
 
 export const isFunction = val => toString(val) === '[object Function]';
+export const isString = val => toString(val) === '[object String]';
+export const isObject = val => toString(val) === '[object Object]';
+export const isEmptyObject = obj => (isObject(obj) && Object.keys(obj).length === 0);
+
+export const hasCordova = () => typeof cordova !== 'undefined';
 
 export const getFileName = fileURL => fileURL.substr(fileURL.lastIndexOf('/') + 1);
 
@@ -41,8 +46,8 @@ export const throwMsgWhenCordovaIsUndefined = () => {
   invariant(null, 'Make sure that cordova.js is properly introduced and that the <script type="text/javascript" src="applocal://www/cordova.min.js"></script> tag is added to the html page. And make sure to perform the cordova event after deviceReady.');
 };
 
-export const merge = (/* obj1, obj2, obj3, ... */) => {
-  var result = {};
+export const merge = function() {
+  const result = {};
   function assignValue(val, key) {
     if (typeof result[key] === 'object' && typeof val === 'object') {
       result[key] = merge(result[key], val);
@@ -50,14 +55,13 @@ export const merge = (/* obj1, obj2, obj3, ... */) => {
       result[key] = val;
     }
   }
-
-  for (var i = 0, l = arguments.length; i < l; i++) {
-    forEach(arguments[i], assignValue);
+  for (let i = 0, l = arguments.length; i < l; i += 1) {
+    each(arguments[i], assignValue);
   }
   return result;
 }
 
-export const deepMerge = () => {
+export const deepMerge = function() {
   const result = {};
   function assignValue(val, key) {
     if (typeof result[key] === 'object' && typeof val === 'object') {

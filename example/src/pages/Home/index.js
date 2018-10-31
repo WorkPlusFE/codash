@@ -6,7 +6,7 @@ export default class Home extends Component {
     return (<div className="home-page">
       <ul>
         <li>
-          <Link to="/about" data={x:1}>About</Link>
+          <Link to="/about">About</Link>
         </li>
       </ul>
     </div>);

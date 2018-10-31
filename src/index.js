@@ -6,14 +6,16 @@ import bindBackEvent from './common/bindBackEvent';
 import FileDownload from './common/fileDownload';
 import FileUpload from './common/fileUpload';
 import toBase64 from './common/toBase64';
-import { stringToJson } from './utils';
+import { stringToJson, getFileName } from './utils';
 
-export { 
+export {
   Cordova,
   deviceReady,
   bindBackEvent,
-  stringToJson,
   FileDownload,
   FileUpload,
   toBase64,
+
+  stringToJson,
+  getFileName,
 };

@@ -4,11 +4,11 @@ import invariant from 'invariant';
 import dispatchCordovaEvent from './dispatch';
 import Interceptor from './interceptor';
 import defaultConfig from '../defaultConfig';
-import { merge, deepMerge } from '../utils';
+import { merge, deepMerge, isString } from '../utils';
 
 class Cordova {
-  constructor(instanceConfig) {
-    this.defaults = merge(defaultConfig, instanceConfig);
+  constructor(instanceConfig = {}) {
+    this.defaultsConfig = merge(defaultConfig, instanceConfig);
     this.interceptors = {
       before: new Interceptor(),
       after: new Interceptor(),
@@ -20,7 +20,7 @@ class Cordova {
   }
 
   handle(config) {
-    const dispatchConfig = merge(this.defaults, config);
+    const dispatchConfig = merge(this.defaultsConfig, config);
     const chain = [dispatchCordovaEvent, undefined];
     let promise = Promise.resolve(dispatchConfig);
 
@@ -39,12 +39,23 @@ class Cordova {
     return promise;
   }
 
-  create(hook, action, params = []) {
+  create(hook, action, params = [], extend = {}) {
     invariant(hook, 'Hook cannot be empty');
     invariant(action, 'Action cannot be empty');
 
-    const options = deepMerge(this.defaults, { hook, action, params });
+    const options = deepMerge(this.defaultsConfig, { hook, action, params }, extend);
     return () => this.handle(options);
+  }
+
+  addHook(hook) {
+    invariant(hook, 'Hook cannot be empty');
+    invariant(isString(hook), 'Hook must be a string');
+    const self = this;
+    return {
+      create(action, params = [], extend) {
+        return self.create(hook, action, params, extend);
+      },
+    };
   }
 }
 

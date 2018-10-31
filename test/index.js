@@ -15,7 +15,7 @@ test('Some thing', t => {
     return result;
   }, err => {});
 
-  const fn = instance.create({ yanzu: 'shuai'});
+  const fn = instance.create('hook', 'action');
   return fn().then((res) => {
     t.deepEqual(res.data, 'success!');
   });

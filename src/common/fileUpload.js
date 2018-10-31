@@ -60,7 +60,7 @@ class FileUpload {
         success,
         failure,
         this.options,
-        trustAllHosts: !!options.trustAllHosts,
+        trustAllHosts = !!options.trustAllHosts,
       );
     });
   }
