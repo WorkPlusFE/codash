@@ -1,0 +1,39 @@
+.banner {
+  padding: 30px 20px;
+}
+.banner h1 {
+  margin: 0;
+  line-height: 40px;
+  font-weight: normal;
+}
+.banner p {
+  margin: 0;
+  line-height: 18px;
+  color: #999999;
+}
+
+.am-accordion {
+  margin-bottom: 15px;
+}
+.am-accordion .am-accordion-item {
+  border-radius: 2px;
+  overflow: hidden;
+}
+.am-accordion .am-accordion-item .am-accordion-header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #404040;
+  font-size: 16px;
+}
+html:not([data-scale]) .am-accordion::before,
+html:not([data-scale]) .am-accordion .am-accordion-item .am-accordion-header::after {
+  display: none;
+}
+.am-accordion .am-accordion-item .am-accordion-header i {
+  top: 30px;
+}
+
+.am-list-item .am-list-line .am-list-content {
+  font-size: 14px;
+  color: #404040;
+}

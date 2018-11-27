@@ -1,4 +1,4 @@
-import Cordova from '@workplus/codash/cordova';
+import { Cordova } from '../../../';
 
 const defaultConfig = {
   timeout: -1,
@@ -11,6 +11,11 @@ const defaultConfig = {
       },
       'getAccessToken': function(params) {
         return { access_token: 'mock_token' };
+      },
+    },
+    'WorkPlus_Image': {
+      'selectImage': function(params) {
+        return { image: 'xxxx' };
       },
     }
   }
@@ -42,4 +47,7 @@ const customOptions = {
 export const getAccessToken = wp.create('WorkPlus_Auth', 'getAccessToken', false, customOptions);
 export const getUserTicket = authHook.create('getUserTicket');
 
-export const selectImage = wp.create('WorkPlus_Image', 'selectImage', false, { mock: false });
+export const selectImage = wp.create('WorkPlus_Image', 'selectImage');
+
+
+export default wp; 

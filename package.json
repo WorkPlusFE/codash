@@ -1,12 +1,12 @@
 {
   "name": "@workplus/codash",
-  "version": "0.10.1",
+  "version": "0.10.3",
   "description": "A Cordova utility library.",
   "main": "lib/codash.js",
   "jsnext:main": "lib/codash.mjs",
   "scripts": {
     "test": "ava test/index.js",
-    "pretest": "npm run build",
+    "pretest": "npm run build:all",
     "build": "rollup --config scripts/rollup.config.js",
     "build:spread": "node scripts/spread.build.js",
     "build:all": "npm run build && npm run build:spread",
