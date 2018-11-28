@@ -1,6 +1,4 @@
-# Codash
-
-包含以下能力：
+# Codash <a href="https://www.npmjs.com/package/@workplus/codash"><img alt="npm" src="https://img.shields.io/npm/v/@workplus/codash.svg?style=flat-square"></a>
 
 * 可配置，易用，轻松实现cordova的promisify;
 * 可添加拦截器，处理流程更方便；
