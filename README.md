@@ -4,7 +4,7 @@
 
 ## Docs [TBD]
 
-* cordova-promisify
+* [cordova-promisify](https://github.com/WorkPlusFE/codash/blob/master/docs/core.md)
 * deviceReady
 * bindBackEvent
 * FileDownload
