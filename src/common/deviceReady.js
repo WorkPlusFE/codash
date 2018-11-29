@@ -11,7 +11,7 @@ export default function deviceReady(options = {}) {
 
     let ready = false;
     setTimeout(() => {
-      if (!ready) resolve({ status: -1, deviceready: false });
+      if (!ready) reject({ status: -1, deviceready: false });
     }, timeout);
 
     document.addEventListener('deviceready', () => {
