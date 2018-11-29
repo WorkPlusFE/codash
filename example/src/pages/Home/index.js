@@ -3,11 +3,22 @@ import React, { Component } from 'react';
 import { Accordion, List } from 'antd-mobile';
 import accordions from './accordions';
 
+import { deviceReady } from '@workplus/codash';
+import { getUserTicket, getAccessToken, getCurrentUserInfo  } from '../../shared/cordova';
+
 import './style.css';
 
 export default class Home extends Component {
   onChange = (key) => {
     console.log(key);
+  }
+
+  componentDidMount() {
+    deviceReady()
+      .then(() => Promise.all([getCurrentUserInfo()]))
+      .then((res) => {
+        alert(JSON.stringify(res));
+      })
   }
   render() {
     return (

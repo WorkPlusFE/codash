@@ -1,14 +1,15 @@
 'use strict';
 
 import invariant from 'invariant';
+import deepmerge from 'deepmerge';
 import dispatchCordovaEvent from './dispatch';
 import Interceptor from './interceptor';
 import defaultConfig from '../defaultConfig';
-import { merge, deepMerge, isString } from '../utils';
+import { isString } from '../utils';
 
 class Cordova {
   constructor(instanceConfig = {}) {
-    this.defaultsConfig = merge(defaultConfig, instanceConfig);
+    this.defaultsConfig = deepmerge(defaultConfig, instanceConfig);
     this.interceptors = {
       before: new Interceptor(),
       after: new Interceptor(),
@@ -20,7 +21,7 @@ class Cordova {
   }
 
   handle(config) {
-    const dispatchConfig = merge(this.defaultsConfig, config);
+    const dispatchConfig = deepmerge(this.defaultsConfig, config);
     const chain = [dispatchCordovaEvent, undefined];
     let promise = Promise.resolve(dispatchConfig);
 
@@ -43,7 +44,7 @@ class Cordova {
     invariant(hook, 'Hook cannot be empty');
     invariant(action, 'Action cannot be empty');
 
-    const options = deepMerge(this.defaultsConfig, { hook, action, params }, extend);
+    const options = deepmerge({ hook, action, params }, extend);
     return () => this.handle(options);
   }
 

@@ -3,7 +3,7 @@ import { Cordova } from '../../../';
 const defaultConfig = {
   timeout: -1,
   json: true,
-  mock: true,
+  mock: false,
   mockData: {
     'WorkPlus_Auth': {
       'getUserTicket': function(params) {
@@ -44,8 +44,9 @@ const customOptions = {
   },
   timeout: 1000,
 }
-export const getAccessToken = wp.create('WorkPlus_Auth', 'getAccessToken', false, customOptions);
+export const getAccessToken = wp.create('WorkPlus_Auth', 'getAccessToken');
 export const getUserTicket = authHook.create('getUserTicket');
+export const getCurrentUserInfo =  wp.create('WorkPlus_Contact', 'getCurrentUserInfo', [{ 'needEmpInfo': true }]);
 
 export const selectImage = wp.create('WorkPlus_Image', 'selectImage');
 

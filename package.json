@@ -1,6 +1,6 @@
 {
   "name": "@workplus/codash",
-  "version": "0.10.3",
+  "version": "0.10.4",
   "description": "A Cordova utility library.",
   "main": "lib/codash.js",
   "jsnext:main": "lib/codash.mjs",
@@ -30,6 +30,7 @@
     "rollup-watch": "^2.5.0"
   },
   "dependencies": {
+    "deepmerge": "^2.2.1",
     "invariant": "^2.2.4"
   }
 }

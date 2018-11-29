@@ -46,35 +46,3 @@ export const throwMsgWhenCordovaIsUndefined = () => {
   invariant(null, 'Make sure that cordova.js is properly introduced and that the <script type="text/javascript" src="applocal://www/cordova.min.js"></script> tag is added to the html page. And make sure to perform the cordova event after deviceReady.');
 };
 
-export const merge = function() {
-  const result = {};
-  function assignValue(val, key) {
-    if (typeof result[key] === 'object' && typeof val === 'object') {
-      result[key] = merge(result[key], val);
-    } else {
-      result[key] = val;
-    }
-  }
-  for (let i = 0, l = arguments.length; i < l; i += 1) {
-    each(arguments[i], assignValue);
-  }
-  return result;
-}
-
-export const deepMerge = function() {
-  const result = {};
-  function assignValue(val, key) {
-    if (typeof result[key] === 'object' && typeof val === 'object') {
-      result[key] = deepMerge(result[key], val);
-    } else if (typeof val === 'object') {
-      result[key] = deepMerge({}, val);
-    } else {
-      result[key] = val;
-    }
-  }
-
-  for (let i = 0, l = arguments.length; i < l; i += 1) {
-    each(arguments[i], assignValue);
-  }
-  return result;
-};
