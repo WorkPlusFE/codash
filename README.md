@@ -5,7 +5,7 @@
 * 接口可模拟，无需写两套同名方法；
 * 提供常用方法，如绑定物理返回按钮，文件上传下载等。
 
-## Docs [TBD]
+## Docs
 
 * [cordova-promisify](https://github.com/WorkPlusFE/codash/blob/master/docs/core.md)
 * [deviceReady](https://github.com/WorkPlusFE/codash/blob/master/docs/base.md#deviceready)
