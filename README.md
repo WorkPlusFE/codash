@@ -1,6 +1,9 @@
-# Codash
+# Codash <a href="https://www.npmjs.com/package/@workplus/codash"><img alt="npm" src="https://img.shields.io/npm/v/@workplus/codash.svg?style=flat-square"></a>
 
-> 一个*Cordova-promisify*库，可配置、易用、可拦截。并包含常用方法，如监听deviceready，物理返回按钮绑定等。
+* 可配置，易用，轻松实现cordova的promisify;
+* 可添加拦截器，处理流程更方便；
+* 接口可模拟，无需写两套同名方法；
+* 提供常用方法，如绑定物理返回按钮，文件上传下载等。
 
 ## Docs [TBD]
 
