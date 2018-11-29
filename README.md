@@ -10,8 +10,7 @@
 * [创建promisify的corodva方法](https://github.com/WorkPlusFE/codash/blob/master/docs/core.md)
 * [监听设备加载完毕](https://github.com/WorkPlusFE/codash/blob/master/docs/base.md#deviceready)
 * [绑定安卓机物理返回按钮的返回事件](https://github.com/WorkPlusFE/codash/blob/master/docs/base.md#bindbackevent)
-* [文件下载](https://github.com/WorkPlusFE/codash/blob/master/docs/base.md#bindbackevent)
-* [文件上传](https://github.com/WorkPlusFE/codash/blob/master/docs/file.md#fileupload)
+* [文件下载](https://github.com/WorkPlusFE/codash/blob/master/docs/base.md#bindbackevent) / [文件上传](https://github.com/WorkPlusFE/codash/blob/master/docs/file.md#fileupload)
 * [图片转base64](https://github.com/WorkPlusFE/codash/blob/master/docs/file.md#tobase64)
 
 ## Install
