@@ -8,11 +8,11 @@
 ## Docs [TBD]
 
 * [cordova-promisify](https://github.com/WorkPlusFE/codash/blob/master/docs/core.md)
-* deviceReady
-* bindBackEvent
-* FileDownload
-* FileUpload
-* toBase64
+* [deviceReady](https://github.com/WorkPlusFE/codash/blob/master/docs/base.md#deviceready)
+* [bindBackEvent](https://github.com/WorkPlusFE/codash/blob/master/docs/base.md#bindbackevent)
+* [FileDownload](https://github.com/WorkPlusFE/codash/blob/master/docs/base.md#bindbackevent)
+* [FileUpload](https://github.com/WorkPlusFE/codash/blob/master/docs/file.md#fileupload)
+* [toBase64](https://github.com/WorkPlusFE/codash/blob/master/docs/file.md#tobase64)
 
 ## Install
 

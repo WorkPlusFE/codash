@@ -2,3 +2,5 @@
 
 
 ## FileUpload
+
+## toBase64
