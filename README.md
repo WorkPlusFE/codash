@@ -12,6 +12,8 @@
 ## Docs
 
 * [创建 promisify-corodva 方法](https://github.com/WorkPlusFE/codash/blob/master/docs/core.md#cordova--constructor)
+* [如何添加添加拦截器](https://github.com/WorkPlusFE/codash/blob/master/docs/core.md#%E6%B7%BB%E5%8A%A0%E6%8B%A6%E6%88%AA%E5%99%A8)
+* [如何设置模拟数据](https://github.com/WorkPlusFE/codash/blob/master/docs/core.md#%E6%8E%A5%E5%8F%A3%E6%A8%A1%E6%8B%9F)
 * [监听设备加载完毕](https://github.com/WorkPlusFE/codash/blob/master/docs/base.md#deviceready)
 * [绑定安卓机物理返回按钮的返回事件](https://github.com/WorkPlusFE/codash/blob/master/docs/base.md#bindbackevent)
 * [文件下载](https://github.com/WorkPlusFE/codash/blob/master/docs/base.md#filedownload) / [文件上传](https://github.com/WorkPlusFE/codash/blob/master/docs/file.md#fileupload)
