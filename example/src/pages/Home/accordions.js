@@ -1,45 +1,55 @@
+import WorkPlusAuth from '../../cordova/WorkPlus_Auth';
+import WorkPlusImage from '../../cordova/WorkPlus_Image';
+import WorkPlusContact from '../../cordova/WorkPlus_Contact';
+import WorkPlusFiles from '../../cordova/WorkPlus_Files';
+import WorkPlusWebView from '../../cordova/WorkPlus_WebView';
+import WorkPlusLocation from '../../cordova/WorkPlus_Location';
+import WorkPlusBarcodeScanner from "../../cordova/WorkPlus_BarcodeScanner";
+import WorkPlusAppStore from "../../cordova/WorkPlus_AppStore";
+import WorkPlusPublicClound from '../../cordova/WorkPlus_PublicClound';
+import WorkPlusTheme from '../../cordova/WorkPlus_Theme';
+
 const accordions = [{
-  title: '图片 WorkPlus_Image',
-  items: [{
-    title: '拍照返回'
-  }, {
-    title: '拍照返回并且可编辑'
-  }, {
-    title: '选择图片（单张）'
-  }, {
-    title: '选择图片并截图返回（单张）'
-  }, {
-    title: '选择多张图片'
-  }, {
-    title: '清除压缩后的图片'
-  }, {
-    title: '批量预览图片'
-  }, {
-    title: '保存图片'
-  }, {
-    title: '长按图片弹出框'
-  }]
+  title: '用户信息',
+  hook: 'WorkPlus_Auth',
+  items: WorkPlusAuth,
 }, {
-  title: '联系人 WorkPlus_Contact',
-  items: [{
-    title: '单选联系人'
-  }, {
-    title: '多选联系人列表'
-  }, {
-    title: '多选当前组织的雇员列表'
-  }, {
-    title: '获取当前登录用户详情'
-  }, {
-    title: '返回当前用户的雇员信息'
-  }, {
-    title: '显示与该用户的聊天页面'
-  }, {
-    title: '获取手机通讯录'
-  }, {
-    title: '保存图片'
-  }, {
-    title: '根据用户id获取用户信息'
-  }]
+  title: '图片',
+  hook: 'WorkPlus_Image',
+  items: WorkPlusImage,
+}, {
+  title: '联系人',
+  hook: 'WorkPlus_Contact',
+  items: WorkPlusContact,
+}, {
+  title: '文件',
+  hook: 'WorkPlus_Files',
+  items: WorkPlusFiles,
+}, {
+  title: '网页',
+  hook: 'WorkPlus_WebView',
+  items: WorkPlusWebView,
+}, {
+  title: '地理位置',
+  hook: 'WorkPlus_Location',
+  items: WorkPlusLocation,
+}, {
+  title: '扫码',
+  hook: 'WorkPlus_BarcodeScanner',
+  items: WorkPlusBarcodeScanner,
+}, {
+  title: '应用市场',
+  hook: 'WorkPlus_AppStore',
+  items: WorkPlusAppStore,
+}, {
+  title: '公有云',
+  hook: 'WorkPlus_PublicClound',
+  items: WorkPlusPublicClound,
+}, {
+  title: '主题',
+  hook: 'WorkPlus_Theme',
+  items: WorkPlusTheme,
 }];
 
 export default accordions;
+

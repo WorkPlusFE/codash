@@ -21,7 +21,6 @@ const defaultConfig = {
   }
 };
 const wp = new Cordova(defaultConfig);
-const authHook = wp.addHook('WorkPlus_Auth');
 
 wp.interceptors.before.use((config) => {
   console.log(config);
@@ -33,22 +32,10 @@ wp.interceptors.after.use((response) => {
   return response;
 }, err => console.log(err));
 
-const customOptions = {
-  mock: true, 
-  mockData: {
-    'WorkPlus_Auth': {
-      'getAccessToken': function(params) {
-        return { access_token: 'mock_token_custom' };
-      },
-    }
-  },
-  timeout: 1000,
-}
-export const getAccessToken = wp.create('WorkPlus_Auth', 'getAccessToken');
-export const getUserTicket = authHook.create('getUserTicket');
-export const getCurrentUserInfo =  wp.create('WorkPlus_Contact', 'getCurrentUserInfo', [{ 'needEmpInfo': true }]);
-
 export const selectImage = wp.create('WorkPlus_Image', 'selectImage');
-
+export const changeTitle = title => {
+  const fn = wp.create('WorkPlus_WebView', 'title', [title]);
+  return fn();
+};
 
 export default wp; 

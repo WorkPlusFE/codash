@@ -1,10 +1,13 @@
 .banner {
   padding: 30px 20px;
+  text-align: center;
 }
 .banner h1 {
   margin: 0;
   line-height: 40px;
   font-weight: normal;
+  color: #248DF7;
+  padding-bottom: 5px;
 }
 .banner p {
   margin: 0;
@@ -35,5 +38,12 @@ html:not([data-scale]) .am-accordion .am-accordion-item .am-accordion-header::af
 
 .am-list-item .am-list-line .am-list-content {
   font-size: 14px;
+  color: #404040;
+}
+
+.am-list-item .am-list-line .am-list-content a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
   color: #404040;
 }

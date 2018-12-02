@@ -5,15 +5,17 @@
 * 接口可模拟，无需写两套同名方法；
 * 提供常用方法，如绑定物理返回按钮，文件上传下载等。
 
-## Docs
-
-* [创建 promisify-corodva 方法](https://github.com/WorkPlusFE/codash/blob/master/docs/core.md#cordova--constructor)
-* [监听设备加载完毕](https://github.com/WorkPlusFE/codash/blob/master/docs/base.md#deviceready)
-* [绑定安卓机物理返回按钮的返回事件](https://github.com/WorkPlusFE/codash/blob/master/docs/base.md#bindbackevent)
-* [文件下载](https://github.com/WorkPlusFE/codash/blob/master/docs/base.md#filedownload) / [文件上传](https://github.com/WorkPlusFE/codash/blob/master/docs/file.md#fileupload)
-* [图片转base64](https://github.com/WorkPlusFE/codash/blob/master/docs/file.md#tobase64)
+<img src="https://github.com/WorkPlusFE/codash/blob/master/design/qr-code.png" width="150" height="150" alt="demo-link" />
 
 > [WorkPlus Cordova API 官方说明文档](https://cordova-apidocs3.workplus.io/)
+
+## Docs
+
+* [创建 promisify-corodva 方法](https://github.com/WorkPlusFE/codash/blob/master/src/docs/core.md#cordova--constructor)
+* [监听设备加载完毕](https://github.com/WorkPlusFE/codash/blob/master/src/docs/base.md#deviceready)
+* [绑定安卓机物理返回按钮的返回事件](https://github.com/WorkPlusFE/codash/blob/master/src/docs/base.md#bindbackevent)
+* [文件下载](https://github.com/WorkPlusFE/codash/blob/master/src/docs/base.md#filedownload) / [文件上传](https://github.com/WorkPlusFE/codash/blob/master/src/docs/file.md#fileupload)
+* [图片转base64](https://github.com/WorkPlusFE/codash/blob/master/src/docs/file.md#tobase64)
 
 ## Install
 

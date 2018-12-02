@@ -6,8 +6,19 @@ li {
   list-style: none;
 }
 
+.am-card {
+  min-height: auto;
+}
 .am-card-header {
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.am-card-header .am-card-header-content {
+  color: #2992E3;
+}
+.am-card-body {
+  min-height: auto;
+  padding-bottom: 9px;
 }
 
 .base-page {
@@ -18,4 +29,43 @@ li {
   font-size: 16px;
   line-height: 20px;
   padding: 0 0 8px 0;
+}
+.base-info ul li:last-child{
+  padding-bottom: 0;
+}
+
+.icon-edit {
+  color: #2992E3;
+  font-style: normal;
+  margin-left: 10px;
+  padding: 5px 0 5px 18px;
+  background: url("../../assets/icons/edit.png") 0 center no-repeat;
+  background-size: 14px;
+  font-size: 14px;
+}
+.icon-copy {
+  color: #2992E3;
+  font-style: normal;
+  margin-left: 10px;
+  padding: 5px 0 5px 18px;
+  background: url("../../assets/icons/copy.png") 0 center no-repeat;
+  background-size: 15px;
+  font-size: 14px;
+}
+
+#eidt-params {
+  width: 95%;
+  min-height: 60px;
+  outline: none;
+  border: none;
+  border: 1px solid #bebebe;
+  appearance: none;
+  font-size: 20px;
+  color: #2992E3;
+  padding: 6px;
+}
+
+.tips {
+  font-size: 13px;
+  color: #C74E2C;
 }

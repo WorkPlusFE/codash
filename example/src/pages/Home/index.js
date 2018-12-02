@@ -1,42 +1,41 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
-import { Accordion, List } from 'antd-mobile';
+import { Link } from 'react-router-dom';
+import { Accordion, List, WhiteSpace } from 'antd-mobile';
 import accordions from './accordions';
-
-import { deviceReady } from '@workplus/codash';
-import { getUserTicket, getAccessToken, getCurrentUserInfo  } from '../../shared/cordova';
+import logo from '../../assets/logo/workplus.png';
+import { changeTitle } from '../../shared/cordova';
 
 import './style.css';
 
-export default class Home extends Component {
-  onChange = (key) => {
-    console.log(key);
-  }
+const ListItem = (item, index) => (
+  <List.Item key={index} arrow={'horizontal'}>
+    <Link to={{ pathname: `/base/${item.options.hook}/${item.options.action}` }}>{item.title}</Link>
+  </List.Item>
+);
 
+export default class Home extends Component {
   componentDidMount() {
-    deviceReady()
-      .then(() => Promise.all([getCurrentUserInfo()]))
-      .then((res) => {
-        alert(JSON.stringify(res));
-      })
+    changeTitle('Cordova');
   }
   render() {
     return (
       <div className="home-page">
         <div className="banner">
-          <h1>WorkPlus</h1>
-          <p>v3.10.1</p>
+          <img src={logo} width="70" height="70" alt="workplus logo" />
+          <h1>WorkPlus Cordova API</h1>
+          <p>本应用只是对相关接口功能进行展示，具体的参数和说明，请以官方文档为准。带 * 号的例子，需要添加额外的参数才可执行。</p>
         </div>
         <div style={{ padding: '0 20px' }}>
           { accordions.map((item, index) => (<Accordion key={index} className="wp-accordion">
-              <Accordion.Panel header={item.title}>
+              <Accordion.Panel header={`${item.title} ${item.hook}`}>
                 <List className="wp-list">
-                  {item.items.map((it, i) => (<List.Item key={i} arrow={'horizontal'}>{it.title}</List.Item>))}
+                  { item.items.map((it, i) => ListItem(it, i)) }
                 </List>
               </Accordion.Panel>
             </Accordion>))
           }
         </div>
+        <WhiteSpace size="lg" />
       </div>
     );
   }
