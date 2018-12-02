@@ -6,6 +6,7 @@
 * 提供常用方法，如绑定物理返回按钮，文件上传下载等。
 
 <img src="https://github.com/WorkPlusFE/codash/blob/master/design/qr-code.png" width="150" height="150" alt="demo-link" />
+<p>使用 WorkPlus 扫一扫，查看在线 demo.</p>
 
 > [WorkPlus Cordova API 官方说明文档](https://cordova-apidocs3.workplus.io/)
 
