@@ -32,7 +32,7 @@ npm install @workplus/codash --save
 ```js
 import { Cordova, deviceReady } from '@workplus/codash';
 
-// 实例化
+// 实例化，相关可用配置属性，请查看文档
 const wp = new Cordova();
 
 // 设置拦截器
@@ -49,8 +49,8 @@ const getUserTicket = authHook.create('getUserTicket');
 
 const getAccessToken = wp.create('WorkPlus_Auth', 'getAccessToken');
 
-// 调用
-deviceReady()
+// deviceReady 同样可以配置，具体请查看文档
+deviceReady({ isMock: false })
   .then(() => Promise.all([getUserTicket(), getAccessToken()]))
   .then((res) => {})
   .catch((err) => {});
