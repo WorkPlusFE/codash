@@ -9,7 +9,7 @@
 
 <img src="https://github.com/WorkPlusFE/codash/blob/master/design/qr-code.png" width="150" height="150" alt="demo-link" />
 
-> [WorkPlus Cordova API 官方说明文档](https://cordova-apidocs3.workplus.io/)
+> [WorkPlus Cordova API 官方说明文档](https://workplusfe.github.io/cordova-docs/)
 
 ## Docs
 
