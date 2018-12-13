@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/cordova-example/precache-manifest.d5e82430f6f5c5f6391fca7a3fb42a00.js"
+  "/WorkPlusFE/codash/precache-manifest.67270cb373ec5810cf5acb0f0c8c58c5.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/cordova-example/index.html", {
+workbox.routing.registerNavigationRoute("/WorkPlusFE/codash/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
