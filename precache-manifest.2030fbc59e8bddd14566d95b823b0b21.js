@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/codash/static/js/runtime~main.0a0e172d.js"
   },
   {
-    "revision": "bb4a7ad4f7fa718a8447",
-    "url": "/codash/static/js/main.bb4a7ad4.chunk.js"
+    "revision": "5da098f5bcde2a497806",
+    "url": "/codash/static/js/main.5da098f5.chunk.js"
   },
   {
     "revision": "e2922961ba92487223aa",
     "url": "/codash/static/js/1.e2922961.chunk.js"
   },
   {
-    "revision": "bb4a7ad4f7fa718a8447",
+    "revision": "5da098f5bcde2a497806",
     "url": "/codash/static/css/main.41506d92.chunk.css"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/codash/static/css/1.c92bd95a.chunk.css"
   },
   {
-    "revision": "3e76a14487fafb603586226bb3a1b58e",
+    "revision": "fdf985bc1d45b0e6ca2d801125a5de44",
     "url": "/codash/index.html"
   }
 ];

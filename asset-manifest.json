@@ -1,16 +1,16 @@
 {
   "main.css": "/codash/static/css/main.41506d92.chunk.css",
-  "main.js": "/codash/static/js/main.bb4a7ad4.chunk.js",
-  "main.js.map": "/codash/static/js/main.bb4a7ad4.chunk.js.map",
+  "main.js": "/codash/static/js/main.5da098f5.chunk.js",
+  "main.js.map": "/codash/static/js/main.5da098f5.chunk.js.map",
   "static/css/1.c92bd95a.chunk.css": "/codash/static/css/1.c92bd95a.chunk.css",
   "static/js/1.e2922961.chunk.js": "/codash/static/js/1.e2922961.chunk.js",
   "static/js/1.e2922961.chunk.js.map": "/codash/static/js/1.e2922961.chunk.js.map",
   "runtime~main.js": "/codash/static/js/runtime~main.0a0e172d.js",
   "runtime~main.js.map": "/codash/static/js/runtime~main.0a0e172d.js.map",
-  "static/css/1.c92bd95a.chunk.css.map": "/codash/static/css/1.c92bd95a.chunk.css.map",
-  "static/media/workplus.png": "/codash/static/media/workplus.a21ae076.png",
   "static/css/main.41506d92.chunk.css.map": "/codash/static/css/main.41506d92.chunk.css.map",
+  "static/media/workplus.png": "/codash/static/media/workplus.a21ae076.png",
+  "static/css/1.c92bd95a.chunk.css.map": "/codash/static/css/1.c92bd95a.chunk.css.map",
   "index.html": "/codash/index.html",
-  "precache-manifest.ccdef5a0d2491c987a96d26f3241f70c.js": "/codash/precache-manifest.ccdef5a0d2491c987a96d26f3241f70c.js",
+  "precache-manifest.2030fbc59e8bddd14566d95b823b0b21.js": "/codash/precache-manifest.2030fbc59e8bddd14566d95b823b0b21.js",
   "service-worker.js": "/codash/service-worker.js"
 }
