@@ -8,6 +8,10 @@ import WorkPlusBarcodeScanner from "../../cordova/WorkPlus_BarcodeScanner";
 import WorkPlusAppStore from "../../cordova/WorkPlus_AppStore";
 import WorkPlusPublicClound from '../../cordova/WorkPlus_PublicClound';
 import WorkPlusTheme from '../../cordova/WorkPlus_Theme';
+import WorkPlusDeviceInfo from '../../cordova/WorkPlus_DeviceInfo';
+import WorkPlusNetInfo from '../../cordova/WorkPlus_NetInfo';
+import WorkPlusEmail from '../../cordova/WorkPlus_Email';
+import WorkPlusEventLog from '../../cordova/WorkPlus_EventLog';
 
 const accordions = [{
   title: '用户信息',
@@ -34,6 +38,14 @@ const accordions = [{
   hook: 'WorkPlus_Location',
   items: WorkPlusLocation,
 }, {
+  title: '设备信息',
+  hook: 'WorkPlus_DeviceInfo',
+  items: WorkPlusDeviceInfo,
+}, {
+  title: '网络连接信息',
+  hook: 'WorkPlus_NetInfo',
+  items: WorkPlusNetInfo,
+}, {
   title: '扫码',
   hook: 'WorkPlus_BarcodeScanner',
   items: WorkPlusBarcodeScanner,
@@ -41,6 +53,14 @@ const accordions = [{
   title: '应用市场',
   hook: 'WorkPlus_AppStore',
   items: WorkPlusAppStore,
+}, {
+  title: '邮箱接口',
+  hook: 'WorkPlus_Email',
+  items: WorkPlusEmail,
+}, {
+  title: '事件日志接口',
+  hook: 'WorkPlus_EventLog',
+  items: WorkPlusEventLog,
 }, {
   title: '公有云',
   hook: 'WorkPlus_PublicClound',

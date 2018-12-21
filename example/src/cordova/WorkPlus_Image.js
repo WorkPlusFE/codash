@@ -118,6 +118,20 @@ const WorkPlus_Image = [{
     hook,
     hookInstance,
   },
+}, {
+  title: '图片添加水印',
+  page: 'base',
+  tips: `拍照，生成水印图片返回；Workplus 3.6.0版本以上使用。`,
+  options: {
+    action: 'takePhotoAndAddWaterMark',
+    params: [{
+      "content": "我是xxx",
+      "font_size": "14",
+      "color": "#FF5858"
+    }],
+    hook,
+    hookInstance,
+  },
 }];
 
 export default WorkPlus_Image;

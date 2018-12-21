@@ -111,7 +111,7 @@ const WorkPlus_WebView = [{
   page: 'base',
   tips:  `跳转到workkplus特定页面`,
   options: {
-    action: 'exit',
+    action: 'toActivity',
     params: [{
       "activity": "toMain",
       "client_id": "用户id",
@@ -128,10 +128,101 @@ const WorkPlus_WebView = [{
   page: 'base',
   tips:  `是否隐藏或显示左侧的按钮和关闭字样`,
   options: {
-    action: 'exit',
+    action: 'visibleLeftButton',
     params: [{
       showBack: true,
       showClose: true,
+    }],
+    hook,
+    hookInstance,
+  },
+}, {
+  title: '更换左侧侧按钮和定义动作 *',
+  page: 'base',
+  tips:  `更换左侧的按钮动作，在workplus3.1.3版本之后新增disable参数`,
+  options: {
+    action: 'changeLeftButton',
+    params: [[{
+      "disable": "false",
+      "icon": -1,
+      "title": "标题",
+      "action": "js",
+      "value": ""
+    }]],
+    hook,
+    hookInstance,
+  },
+}, {
+  title: '控制屏幕旋转',
+  page: 'base',
+  tips:  `根据参数控制屏幕横屏显示或者竖屏显示；WorkPlus版本3.1.3以上版本使用。`,
+  options: {
+    action: 'changeOrientation',
+    params: [{
+      landscape: true,
+      lock: false,
+    }],
+    hook,
+    hookInstance,
+  },
+}, {
+  title: '添加水印',
+  page: 'base',
+  tips:  `给页面添加水印`,
+  options: {
+    action: 'addWaterMask',
+    params: [{
+      "textColor" : "#000000",
+      "alpha": 1.0,
+      "verticalPadding": 40,
+      "fontSize": 16
+    }],
+    hook,
+    hookInstance,
+  },
+}, {
+  title: '移除水印',
+  page: 'base',
+  tips:  `给页面移除水印`,
+  options: {
+    action: 'removeWaterMask',
+    params: [],
+    hook,
+    hookInstance,
+  },
+}, {
+  title: '注册摇一摇',
+  page: 'base',
+  tips:  `前端需要实现onWorkplusShake()方法, 在该处执行自己的业务, 摇一摇后将在该方法回调.`,
+  options: {
+    action: 'registerShakeListener',
+    params: [],
+    hook,
+    hookInstance,
+  },
+}, {
+  title: '注销摇一摇',
+  page: 'base',
+  tips:  `注销摇一摇监听`,
+  options: {
+    action: 'unregisterShakeListener',
+    params: [],
+    hook,
+    hookInstance,
+  },
+}, {
+  title: '微信分享(会话/朋友圈) *',
+  page: 'base',
+  tips:  `根据接口直接调起微信分享页面`,
+  options: {
+    action: 'wxShare',
+    params: [{
+      "title": "这是一个标题",
+      "type"  : "webpage",
+      "description": "这是概要，你信不信",
+      "thumb": "base64://xxxxx==",
+      "scene": 0,
+      "data"  : { "url" : "https://www.baidu.com" }
     }],
     hook,
     hookInstance,

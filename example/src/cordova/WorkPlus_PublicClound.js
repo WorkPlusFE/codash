@@ -19,6 +19,16 @@ const WorkPlus_PublicClound = [{
     hook,
     hookInstance,
   },
+}, {
+  title: '获取WorkPlus信息',
+  page: 'base',
+  tips: '获取workplus版本信息',
+  options: {
+    action: 'getAppInfo',
+    params: [],
+    hook,
+    hookInstance,
+  },
 }];
 
 export default WorkPlus_PublicClound;

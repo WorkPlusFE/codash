@@ -23,7 +23,7 @@ export default class Home extends Component {
         <div className="banner">
           <img src={logo} width="70" height="70" alt="workplus logo" />
           <h1>WorkPlus Cordova API</h1>
-          <p>本应用只是对相关接口功能进行展示，具体的参数和说明，请以官方文档为准。带 * 号的例子，需要添加额外的参数才可执行。</p>
+          <p>本应用只是对相关接口功能进行展示，具体的参数和说明，请以官方文档为准。带 * 号的例子，需要添加额外的参数才可执行。注意：部分接口只能在特定的包内执行。</p>
         </div>
         <div style={{ padding: '0 20px' }}>
           { accordions.map((item, index) => (<Accordion key={index} className="wp-accordion">

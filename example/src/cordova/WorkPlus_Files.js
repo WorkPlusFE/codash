@@ -53,6 +53,51 @@ const WorkPlus_Files = [{
     hook,
     hookInstance,
   },
+}, {
+  title: '获取 workplus 文件目录路径',
+  page: 'base',
+  tips: 'Workplus 3.1.4版本以上使用。',
+  options: {
+    action: 'getUserFilePath',
+    params: [{ system: 'file' }],
+    hook,
+    hookInstance,
+  },
+}, {
+  title: '打开文件详情 *',
+  page: 'base',
+  tips: '通过指定 mediaId, fileName 等参数, 打开文件详情界面',
+  options: {
+    action: 'showFile',
+    params: [{
+      "fileName": "xxx",
+      "fileSize": "xxx",
+      "mediaId" : "Z3JvdXAxL00wMC8wOS82RS9yQkFDLUZzV1EwMkFJblF5QUFDb293akxFYjQ5NjIuanBn",
+      "isImage": false
+    }],
+    hook,
+    hookInstance,
+  },
+}, {
+  title: '本地打开文件 *',
+  page: 'base',
+  tips: '原生打开文件(pdf, excel, word, ppt 等)',
+  options: {
+    action: 'readFile',
+    params: [{ path: 'xxx' }],
+    hook,
+    hookInstance,
+  },
+}, {
+  title: '判断文件是否存在 *',
+  page: 'base',
+  tips: '判断指定路径的文件是否存在',
+  options: {
+    action: 'isFileExist',
+    params: [{ path: 'xxx' }],
+    hook,
+    hookInstance,
+  },
 }];
 
 export default WorkPlus_Files;
