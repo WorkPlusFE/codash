@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/codash/static/css/1.c92bd95a.chunk.css"
   },
   {
-    "revision": "fdf985bc1d45b0e6ca2d801125a5de44",
+    "revision": "a3f5608f1a2a1af20c3527c38face427",
     "url": "/codash/index.html"
   }
 ];
