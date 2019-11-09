@@ -4,6 +4,7 @@
   "description": "A Cordova utility library.",
   "main": "lib/codash.js",
   "jsnext:main": "lib/codash.mjs",
+  "typings": "types/index.d.ts",
   "scripts": {
     "test": "ava test/index.js",
     "pretest": "npm run build:all",
