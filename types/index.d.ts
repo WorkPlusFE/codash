@@ -9,7 +9,7 @@ declare interface cordovaOptions {
 
 declare class Cordova {
   constructor(config?: cordovaOptions);
-  create(hook: string, action: string, params: string[], option?: cordovaOptions): () => Promise<any>
+  create(hook: string, action: string, params: string[] | PlainObject[], option?: cordovaOptions): () => Promise<any>
   addHook(hook: string): { create: () => Promise<any> }
   interceptors: {
     before: {
