@@ -1,6 +1,6 @@
 type PlainObject = { [name: string]: any }
 
-interface cordovaOptions {
+declare interface cordovaOptions {
   timeout?: number
   json?: boolean
   mock?: boolean
@@ -21,6 +21,10 @@ declare class Cordova {
   }
 }
 
+declare function deviceReady(option?: cordovaOptions): Promise<any>
+
+declare function bindBackEvent(backEvent: Function): void
+
 declare module '@workplus/codash'
 
-export default Cordova
+export { Cordova, deviceReady, cordovaOptions, bindBackEvent }
