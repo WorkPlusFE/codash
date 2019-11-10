@@ -1,5 +1,5 @@
 {
-  "name": "@workplus/codash",
+  "name": "@w6s/codash",
   "version": "0.11.0",
   "description": "A Cordova utility library.",
   "main": "lib/codash.js",
@@ -14,8 +14,13 @@
     "watch": "rollup --config scripts/rollup.config.js -w",
     "prepublish": "npm test"
   },
-  "keywords": [],
-  "author": "Hejx <531601727@qq.com>",
+  "keywords": [
+    "cordova",
+    "codash",
+    "workplus",
+    "w6s"
+  ],
+  "author": "WorkPlusFE",
   "license": "MIT",
   "homepage": "https://github.com/WorkPlusFE/codash#readme",
   "devDependencies": {
