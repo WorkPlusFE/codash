@@ -5,6 +5,9 @@
   "main": "lib/codash.js",
   "jsnext:main": "lib/codash.mjs",
   "typings": "types/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "ava test/index.js",
     "pretest": "npm run build:all",
