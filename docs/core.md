@@ -3,7 +3,7 @@
 new Cordova(config)
 
 ```js
-import { Cordova } from '@workplus/codash';
+import { Cordova } from '@w6s/codash';
 
 // 默认配置
 const config = {

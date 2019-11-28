@@ -3,12 +3,12 @@
 该方法同样也是promisify的，支持mock和超时设置:
 
 ```js
-import { deviceReady } from '@workplus/codash';
+import { deviceReady } from '@w6s/codash';
 
 // 默认配置，非必须
 const config = {
   timeout: 5000, // 默认是5秒后超时，会被reject掉；该错误可以在catch中捕捉到
-  isMock: false, // 若设置为 true，方法执行时会马上成功返回
+  mock: false, // 若设置为 true，方法执行时会马上成功返回
 };
 
 deviceReady(config)
@@ -17,7 +17,7 @@ deviceReady(config)
   });
 ```
 
-注意，因为 deviceReady 方法并没有拦截功能，所以当超时时，会直接 Promise.reject({ status: -1, deviceready: false })。同样，对于 isMock 的设置，可以参考 Cordova mock模式 的设置方式，利用 process.env 进行控制。
+注意，因为 deviceReady 方法并没有拦截功能，所以当超时时，会直接 Promise.reject({ status: -1, deviceready: false })。同样，对于 mock 的设置，可以参考 Cordova mock模式 的设置方式，利用 process.env 进行控制。
 
 ### bindBackEvent
 

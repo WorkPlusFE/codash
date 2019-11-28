@@ -1,4 +1,4 @@
-# Codash <a href="https://www.npmjs.com/package/@workplus/codash"><img alt="npm" src="https://img.shields.io/npm/v/@workplus/codash.svg?style=flat-square"></a>
+# Codash <a href="https://www.npmjs.com/package/@w6s/codash"><img alt="npm" src="https://img.shields.io/npm/v/@w6s/codash.svg?style=flat-square"></a>
 
 * 可配置，易用，轻松实现cordova promisify;
 * 可添加拦截器，处理流程更方便；
@@ -24,13 +24,13 @@
 ## Install
 
 ```bash
-npm install @workplus/codash --save 
+npm install @w6s/codash --save 
 ```
 
 ## Usage
 
 ```js
-import { Cordova, deviceReady } from '@workplus/codash';
+import { Cordova, deviceReady } from '@w6s/codash';
 
 // 实例化，相关可用配置属性，请查看文档
 const wp = new Cordova();
@@ -50,13 +50,14 @@ const getUserTicket = authHook.create('getUserTicket');
 const getAccessToken = wp.create('WorkPlus_Auth', 'getAccessToken');
 
 // deviceReady 同样可以配置，具体请查看文档
-deviceReady({ isMock: false })
+deviceReady({ mock: false })
   .then(() => Promise.all([getUserTicket(), getAccessToken()]))
   .then((res) => {})
   .catch((err) => {});
 
 ```
 
-## Author
+## Contributors
 
-Hejx
+[Hejx(Author)](https://github.com/hejianxian)
+[Elvis](https://github.com/ElvisUpUp)

@@ -1,6 +1,6 @@
 {
   "name": "@w6s/codash",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Cordova utility library.",
   "main": "lib/codash.js",
   "jsnext:main": "lib/codash.mjs",

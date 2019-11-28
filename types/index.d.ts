@@ -2,13 +2,15 @@ type PlainObject = { [name: string]: any }
 
 /**
  * @param {number} timeout - 超时时间
- * @param {boolean} isMock - 是否开启mock模式，⚠️该属性将在下个版本改为mock
+ * @param {boolean} isMock - 是否开启mock模式，⚠️该属性将在下个版本弃用，请使用mock
+ * @param {boolean} mock - 是否开启mock模式
  *
  * @interface deviceReadyOptions
  */
 declare interface deviceReadyOptions {
   timeout?: number
   isMock?: boolean
+  mock?: boolean
 }
 
 /**
@@ -57,6 +59,6 @@ declare function deviceReady(option?: deviceReadyOptions): Promise<any>
 
 declare function bindBackEvent(backEvent: Function): void
 
-declare module '@workplus/codash'
+declare module '@w6s/codash'
 
 export { Cordova, deviceReady, cordovaOptions, bindBackEvent, FileDownload, FileUpload, toBase64 }
