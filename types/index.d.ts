@@ -1,5 +1,24 @@
 type PlainObject = { [name: string]: any }
 
+/**
+ * @param {number} timeout - 超时时间
+ * @param {boolean} isMock - 是否开启mock模式，⚠️该属性将在下个版本改为mock
+ *
+ * @interface deviceReadyOptions
+ */
+declare interface deviceReadyOptions {
+  timeout?: number
+  isMock?: boolean
+}
+
+/**
+ * @param {numben} timeout - 超时时间
+ * @param {boolean} mock - 是否开启mock模式
+ * @param {boolean} json - 是否json化返回结果
+ * @param {PlainObject} mockData - mock的数据
+ *
+ * @interface cordovaOptions
+ */
 declare interface cordovaOptions {
   timeout?: number
   json?: boolean
@@ -34,7 +53,7 @@ declare class FileUpload {
 
 declare function toBase64(path: string, success: (value?: any) => void, fail?: (reason?: any) => void): void
 
-declare function deviceReady(option?: cordovaOptions): Promise<any>
+declare function deviceReady(option?: deviceReadyOptions): Promise<any>
 
 declare function bindBackEvent(backEvent: Function): void
 

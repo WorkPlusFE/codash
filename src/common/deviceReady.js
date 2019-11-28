@@ -5,6 +5,7 @@ export default function deviceReady(options = {}) {
 
   return new Promise((resolve, reject) => {
     if (isMock) {
+      console.warn('isMock属性将在下个版本弃用，改为使用mock属性')
       console.log('[codash]: Mock device ready.');
       return resolve();
     }
