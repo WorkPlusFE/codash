@@ -59,5 +59,5 @@ deviceReady({ mock: false })
 
 ## Contributors
 
-[Hejx(Author)](https://github.com/hejianxian)
-[Elvis](https://github.com/ElvisUpUp)
+* [Hejx(Author)](https://github.com/hejianxian)
+* [Elvis](https://github.com/ElvisUpUp)
