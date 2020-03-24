@@ -14,16 +14,6 @@ const WorkPlus_Auth = [{
     hookInstance,
   },
 }, {
-  title: '获取当前登录用户的accessToken',
-  page: 'base',
-  tips: '当前登录用户的accessToken',
-  options: {
-    action: 'getAccessToken',
-    params: [],
-    hook,
-    hookInstance,
-  },
-}, {
   title: '获取当前app请求后台api地址',
   page: 'base',
   tips: '通过在params中传入字段名，调用方法后，将会返回对应的字段值，例如获取管理后台的API地址等。',
