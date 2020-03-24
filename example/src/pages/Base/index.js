@@ -51,6 +51,12 @@ class Base extends React.Component {
     const fn = hookInstance.create(action, params);
     fn().then((res) => {
       const { data } = res;
+      if (typeof data === 'string') {
+        this.setState({ results: {
+          value: data,
+        }});
+        return;
+      }
       this.setState({ results: data });
     });
   }
